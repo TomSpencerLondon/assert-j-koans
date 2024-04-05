@@ -26,7 +26,7 @@ class BasicAssertions extends Koans {
     @Test
     void basicAssertJAssertions() {
         assertThat("some string").isEqualTo("some string");
-        assertThat(___).isEqualTo(13);
+        assertThat(13).isEqualTo(13);
         assertThat(____).isTrue();
     }
 
