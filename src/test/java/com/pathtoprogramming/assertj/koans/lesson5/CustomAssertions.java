@@ -1,6 +1,7 @@
 package com.pathtoprogramming.assertj.koans.lesson5;
 
 import com.pathtoprogramming.assertj.koans.Koans;
+import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
 import static com.pathtoprogramming.assertj.koans.lesson5.helpers.DomainAssertions.assertThat;
@@ -14,13 +15,12 @@ import static com.pathtoprogramming.assertj.koans.lesson5.helpers.DomainAssertio
  * Do not change anything except the blank (___)
  */
 class CustomAssertions extends Koans {
-
     @Test
     void customPersonAssertions() {
         assertThat(john)
-                .hasFullName(__)
-                .hasBirthday(______)
-                .hasOccupation(__);
+                .hasFullName("John Lennon")
+                .hasBirthday(LocalDate.of(1940, 10, 9))
+                .hasOccupation("Musician");
     }
 }
 

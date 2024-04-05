@@ -21,13 +21,13 @@ class ExceptionAssertions extends Koans {
                 .isThrownBy(() -> {
                     throw new IllegalArgumentException("Illegal Person");
                 })
-                .withMessage(__);
+                .withMessage("Illegal Person");
 
         assertThatThrownBy(() -> {
             throw new IllegalArgumentException("Illegal Person");
         })
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(__);
+                .hasMessageContaining("Illegal Person");
     }
 
     @Test

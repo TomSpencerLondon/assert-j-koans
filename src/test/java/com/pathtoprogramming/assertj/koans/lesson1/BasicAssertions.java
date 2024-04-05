@@ -27,34 +27,34 @@ class BasicAssertions extends Koans {
     void basicAssertJAssertions() {
         assertThat("some string").isEqualTo("some string");
         assertThat(13).isEqualTo(13);
-        assertThat(____).isTrue();
+        assertThat(true).isTrue();
     }
 
     @Test
     void assertingRangesOfNumbers() {
-        assertThat(___).isBetween(1, 10);
-        assertThat(_____).isCloseTo(105, withPercentage(1));
+        assertThat(8).isBetween(1, 10);
+        assertThat(105).isCloseTo(105, withPercentage(1));
     }
 
     @Test
     void customErrorDescription() {
-        assertThat(__)
+        assertThat("assert")
                 .as("does not start with correct letters")
                 .startsWith("assert");
     }
 
     @Test
     void assertingStrings() {
-        assertThat(__).containsOnlyDigits();
-        assertThat(__).containsIgnoringCase("HELLO");
-        assertThat(__)
+        assertThat("10").containsOnlyDigits();
+        assertThat("A HELLO").containsIgnoringCase("HELLO");
+        assertThat("a b c")
                 .as("String must only contain letters and whitespace")
                 .matches("[A-Za-z ]*");
     }
 
     @Test
     void chainingAssertions() {
-        assertThat(__)
+        assertThat("wow hello assertj is awesome")
                 .startsWith("wow")
                 .containsAnyOf("assertj", "awesome");
     }

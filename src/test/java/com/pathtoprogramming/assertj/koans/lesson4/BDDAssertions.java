@@ -17,7 +17,7 @@ class BDDAssertions extends Koans {
 
     @Test
     void BDD() {
-        then(george.fullName()).containsIgnoringCase(__);
-        then(brian).matches(p -> p.occupation().equals(__));
+        then(george.fullName()).containsIgnoringCase("harrison");
+        then(brian).matches(p -> p.occupation().equals("Music Entrepreneur"));
     }
 }

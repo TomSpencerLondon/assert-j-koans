@@ -31,7 +31,7 @@ class CollectionAssertions extends Koans {
         // Using recursiveComparison you can avoid the need to do this
         assertThat(people)
                 .usingRecursiveComparison()
-                .ignoringFields(__)
+                .ignoringFields("birthday")
                 .isEqualTo(copyOfPeople);
     }
 
@@ -43,14 +43,14 @@ class CollectionAssertions extends Koans {
                 .containsOnly(brian);
         assertThat(people)
                 .filteredOnAssertions(person ->
-                        assertThat(person.birthday().getYear()).isLessThan(___))
+                        assertThat(person.birthday().getYear()).isLessThan(1941))
                 .containsOnly(brian, john);
     }
 
     @Test
     void extracting() {
         assertThat(people)
-                .extracting(__, __)
+                .extracting("fullName", "occupation")
                 .contains(
                         tuple("George Harrison", "Musician"),
                         tuple("John Lennon", "Musician"),
